@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".Login_Activity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="40sp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:textAllCaps="false"
+        android:layout_marginTop="130sp"
+        android:textSize="50sp"
+        android:textColor="@color/colorWhite"
+        android:text="Hello There!" />
+
+    <EditText
+        android:id="@+id/editText_email"
+        android:layout_width="300sp"
+        android:layout_height="40sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="30dp"
+        android:hint="Enter your Email"
+        android:background="@drawable/input_field" />
+
+    <EditText
+        android:id="@+id/editText_password"
+        android:layout_width="300sp"
+        android:layout_height="40sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="30dp"
+        android:hint="Password"
+        android:background="@drawable/input_field"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20sp">
+        <Button
+            android:id="@+id/button_login"
+            android:background="@drawable/button"
+            android:layout_width="wrap_content"
+            android:textAllCaps="false"
+            android:layout_height="wrap_content"
+            android:text="Login" />
+
+        <TextView
+            android:id="@+id/textView_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70sp"
+            android:text="Need Help?"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+</LinearLayout>
+<TextView
+android:id="@+id/textView_register"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignParentBottom="true"
+android:layout_marginLeft="40sp"
+android:textColor="@color/black"
+android:textSize="18sp"
+android:text="You are not a member ? Register"
+android:textAllCaps="false"
+android:layout_marginBottom="40sp"
+android:fontFamily="sans-serif-medium"
+    />
+    </RelativeLayout>

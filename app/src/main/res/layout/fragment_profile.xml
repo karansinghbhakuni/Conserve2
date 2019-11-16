@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:background="@color/colorWhite"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            >
+            <LinearLayout
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_collapseMode="parallax"
+                >
+                <RelativeLayout
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="360dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:background="@drawable/cover_background"
+                        android:layout_marginEnd="0dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/display_picture"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@color/black"
+                        android:layout_marginTop="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:elevation="6dp"
+                        android:layout_marginBottom="10dp"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="8dp">
+
+                    </de.hdodenhof.circleimageview.CircleImageView>
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/display_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="10sp"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                    <Button
+                        android:id="@+id/display_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAllCaps="false"
+                        android:layout_margin="5dp"
+                        android:text="Edit profile"
+                        android:onClick="switch1"
+                        android:background="@drawable/buttons"
+                        android:textSize="16dp"
+                        />
+                    <Button
+                        android:id="@+id/display_upload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:textAllCaps="false"
+                        android:text="Upload"
+                        android:background="@drawable/buttons"
+                        android:textSize="16dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_marginTop="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/display_recycler"
+
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

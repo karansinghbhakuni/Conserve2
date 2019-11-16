@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/opensans">
+
+    </font>
+    <font
+        android:font="@font/kalam"
+        android:fontWeight="400"
+        android:fontStyle="normal"
+        />
+    <font
+        android:font="@font/lobster"
+        android:fontWeight="400"
+        android:fontStyle="normal"
+        />
+    <font
+        android:font="@font/opensansbold"
+        android:fontWeight="400"
+        android:fontStyle="normal"
+        />
+    <font
+        android:font="@font/srisakdi"
+        android:fontWeight="400"
+        android:fontStyle="normal"
+        />
+    <font
+        android:font="@font/srisakdibold"
+        android:fontWeight="400"
+        android:fontStyle="normal"
+        />
+</font-family>

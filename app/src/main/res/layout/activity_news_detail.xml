@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".news.NewsDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/news_card"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        android:padding="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+            <ProgressBar
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:id="@+id/swipeloader"/>
+            <ImageView
+                android:id="@+id/news_image"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent">
+            </ImageView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/newsgradient">
+            </ImageView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/news_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Source"
+                    android:fontFamily="@font/opensansbold"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    />
+                <TextView
+                    android:id="@+id/news_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:fontFamily="@font/opensansbold"
+                    android:gravity="right"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    />
+            </LinearLayout>
+        </FrameLayout>
+            <TextView
+                android:id="@+id/news_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TITLE"
+                android:padding="10dp"
+                android:fontFamily="@font/opensansbold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:id="@+id/news_desc"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans"
+                android:text="Desc"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/newscard"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="6dp"
+        android:padding="10dp"
+        >
+        <ProgressBar
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:id="@+id/swipe_loader"/>
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

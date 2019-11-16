@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/slide_image"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="70sp"
+            android:layout_marginRight="70sp"
+            android:layout_height="300sp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/icon1"
+            android:layout_marginTop="30sp"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="10sp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/slide_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="s"
+                android:layout_gravity="center"
+                android:layout_below="@+id/slide_image"
+                android:textAlignment="center"
+                android:layout_above="@+id/slide_desc"
+                android:textSize="30sp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/slide_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20sp"
+                android:layout_alignParentBottom="true"
+                android:text="d"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

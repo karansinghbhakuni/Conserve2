@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".conservelogin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80sp"
+            android:text="Welcome!"
+            android:textColor="@color/colorWhite"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:text="Nice to see you again"
+            android:textColor="@color/colorWhite"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/btn_conservelogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:background="@drawable/button"
+            android:text="Login"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_conserveregister"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="40sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40sp"
+        android:text="You are not a member? Register"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+</RelativeLayout>
