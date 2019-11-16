@@ -21,7 +21,6 @@
         android:textSize="50sp"
         android:textColor="@color/colorWhite"
         android:text="Hello There!" />
-
     <EditText
         android:id="@+id/editText_email"
         android:layout_width="300sp"

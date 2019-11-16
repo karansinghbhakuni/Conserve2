@@ -16,7 +16,8 @@
         android:roundIcon="@drawable/fields"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".earth.EarthDashboard"></activity>
+        <activity android:name=".upload"></activity>
+        <activity android:name=".earth.EarthDashboard" />
         <activity android:name=".CheckActivity" />
         <activity android:name=".SplashScreen">
             <intent-filter>
