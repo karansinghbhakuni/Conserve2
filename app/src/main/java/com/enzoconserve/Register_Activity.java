@@ -32,6 +32,7 @@ public class Register_Activity extends AppCompatActivity {
     String name="",number="";
     String MobilePattern = "[0-9]{10}";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +42,7 @@ public class Register_Activity extends AppCompatActivity {
         ename = findViewById(R.id.editText_name);
         ephn = findViewById(R.id.editText_number);
         bregister = findViewById(R.id.button_register);
+
         mAuth = FirebaseAuth.getInstance();
         account = findViewById(R.id.textView_login);
         progressDialog = new ProgressDialog(this);
@@ -52,6 +54,7 @@ public class Register_Activity extends AppCompatActivity {
                 String pass = epass.getText().toString().trim();
                 name=ename.getText().toString().trim();
                 number=ephn.getText().toString().trim();
+
                 if (name.length() > 20) {
 
                     Toast.makeText(getApplicationContext(), "pls enter less the 20 character in user name", Toast.LENGTH_SHORT).show();
@@ -86,6 +89,7 @@ public class Register_Activity extends AppCompatActivity {
                     epass.setFocusable(true);
                 }
                 else {
+
                     registeruser(email, pass); //registering meathod
                 }
             }

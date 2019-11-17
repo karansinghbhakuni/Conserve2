@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnprev, btnnext;
     int current_page;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         sliderAdapter = new SliderAdapter(this);
         mSlideViewPager.setAdapter(sliderAdapter);
         addDotsIndicator(0);
+
         mSlideViewPager.addOnPageChangeListener(viewListener);
         btnprev.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 if (s == "Finish") {
                     startActivity(new Intent(MainActivity.this,conservelogin.class));
                     finish();
+
                 }
                 mSlideViewPager.setCurrentItem(current_page + 1);
             }
@@ -59,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
             mDots[i].setText(Html.fromHtml("&#8226"));
             mDots[i].setTextColor(getResources().getColor(R.color.colorPrimary));
             mDotLayout.addView(mDots[i]);
+
         }
         if (mDots.length > 0) {
             mDots[position].setTextColor(getResources().getColor(R.color.colorAccent));
@@ -74,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onPageSelected(int i) {
             addDotsIndicator(i);
+
             current_page = i;
             if (i == 0) {
                 btnnext.setEnabled(true);

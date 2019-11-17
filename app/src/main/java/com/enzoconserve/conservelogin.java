@@ -13,8 +13,10 @@ public class conservelogin extends AppCompatActivity {
     TextView registerbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_conservelogin);
+
         btc_login=findViewById(R.id.btn_conservelogin);
         registerbtn=findViewById(R.id.btn_conserveregister);
         btc_login.setOnClickListener(new View.OnClickListener() {

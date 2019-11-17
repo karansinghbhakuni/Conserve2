@@ -10,6 +10,7 @@ public interface ApiInterface {
     @GET("top-headlines")
     Call<Headlines> getHeadlines(
             @Query("country") String country,
+
             @Query("apiKey") String apiKey
     );
 

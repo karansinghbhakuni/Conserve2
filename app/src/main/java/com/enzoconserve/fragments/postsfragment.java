@@ -21,6 +21,7 @@ public class postsfragment extends Fragment{
     //hide toolbar
     @Override
     public void onResume() {
+
         super.onResume();
         ((AppCompatActivity)getActivity()).getSupportActionBar().hide();
     }

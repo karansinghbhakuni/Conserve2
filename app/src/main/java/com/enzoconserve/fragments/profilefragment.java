@@ -28,6 +28,8 @@ public class profilefragment extends Fragment{
         View view=inflater.inflate(R.layout.fragment_profile,container,false);
         Dedit=view.findViewById(R.id.display_edit);
         Dupload=view.findViewById(R.id.display_upload);
+
+
         Dname=view.findViewById(R.id.display_name);
         Dimage=view.findViewById(R.id.display_picture);
 

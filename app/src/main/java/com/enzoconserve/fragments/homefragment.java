@@ -17,6 +17,7 @@ import com.enzoconserve.earth.EarthDashboard;
 public class homefragment extends Fragment{
     @Nullable
     ImageView I1,I2,I3,I4;
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_home,container,false);
@@ -24,6 +25,7 @@ public class homefragment extends Fragment{
         I2=view.findViewById(R.id.imageair);
         I3=view.findViewById(R.id.imagesoil);
         I4=view.findViewById(R.id.imagewater);
+
         I1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -28,16 +28,20 @@ public class RecoverActivity extends AppCompatActivity {
         editText=findViewById(R.id.editText_email);
         Button button_recover = findViewById(R.id.button_recover);
         mAuth = FirebaseAuth.getInstance();
+
+
         button_recover.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 email=editText.getText().toString().trim();
+
                 if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
                     editText.setError("Invalid Email");
                     editText.setFocusable(true);
                 }
                 else
                 {
+
                     beginrecovery(email);
                 }
             }
@@ -50,6 +54,7 @@ public class RecoverActivity extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
+
                         if(task.isSuccessful()){
                             Toast.makeText(RecoverActivity.this,"Email sent ",Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(RecoverActivity.this,Login_Activity.class));
@@ -62,6 +67,7 @@ public class RecoverActivity extends AppCompatActivity {
                 }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+
                 Toast.makeText(RecoverActivity.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(RecoverActivity.this,Login_Activity.class));
             }

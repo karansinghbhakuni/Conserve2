@@ -33,12 +33,14 @@ public class NewsDetailActivity extends AppCompatActivity {
         tvTime = findViewById(R.id.news_date);
         tvDesc = findViewById(R.id.news_desc);
         imageView = findViewById(R.id.news_image);
-        webView=findViewById(R.id.webview);
+
+
 
         Intent intent=getIntent();
         String title=intent.getStringExtra("title");
         String source=intent.getStringExtra("source");
         String time=intent.getStringExtra("time");
+
         String desc=intent.getStringExtra("desc");
         String image=intent.getStringExtra("imageUrl");
         String url=intent.getStringExtra("url");
@@ -50,6 +52,7 @@ public class NewsDetailActivity extends AppCompatActivity {
 
         tvTitle.setText(title);
         tvSource.setText(source);
+
         tvTime.setText(time);
         tvDesc.setText(desc);
 

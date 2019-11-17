@@ -33,6 +33,7 @@ import retrofit2.Response;
 public class newsfragment extends Fragment {
 
     RecyclerView recyclerView;
+
     SwipeRefreshLayout swipeRefreshLayout;
     Dialog dialog;
     final String API_KEY="c4f6128bf69545da89c0fa6e3b7148f0";

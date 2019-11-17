@@ -87,7 +87,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
             tvTitle = itemView.findViewById(R.id.news_title);
             tvSource = itemView.findViewById(R.id.news_source);
+
             tvDate = itemView.findViewById(R.id.news_date);
+
             imageView = itemView.findViewById(R.id.news_image);
             cardView = itemView.findViewById(R.id.news_card);
 

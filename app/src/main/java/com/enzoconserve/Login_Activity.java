@@ -24,7 +24,9 @@ public class Login_Activity extends AppCompatActivity {
     TextView text_help,text_register;
     EditText text_email,text_password;
     Button btn_login;
+
     ProgressDialog progressDialog;
+
     private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class Login_Activity extends AppCompatActivity {
         text_password=findViewById(R.id.editText_password);
         btn_login=findViewById(R.id.button_login);
         mAuth = FirebaseAuth.getInstance();
+
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("...");
         text_register.setOnClickListener(new View.OnClickListener() {

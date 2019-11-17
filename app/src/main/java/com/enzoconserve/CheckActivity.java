@@ -23,10 +23,12 @@ public class CheckActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check);
 
+
         firebaseAuth=FirebaseAuth.getInstance();
         checkuserstatus();
     }
     private void checkuserstatus(){
+
         FirebaseUser user = firebaseAuth.getCurrentUser();
         if(user!=null)
         {

@@ -63,7 +63,9 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
         firebaseAuth=FirebaseAuth.getInstance();
         setContentView(R.layout.activity_dashboard);
+
         drawerLayout=findViewById(R.id.drawer);
+
         toolbar=findViewById(R.id.toolbar);
         navigationView=findViewById(R.id.navigation_view);
         setSupportActionBar(toolbar);
@@ -78,6 +80,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         //test
         View headerView = navigationView.getHeaderView(0);
         slidername = headerView.findViewById(R.id.slider_name);
+
         slideremail=headerView.findViewById(R.id.slider_email);
         slideimage=headerView.findViewById(R.id.profile_pic);
 

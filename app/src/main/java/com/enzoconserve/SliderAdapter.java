@@ -27,6 +27,7 @@ public class SliderAdapter extends PagerAdapter {
             R.drawable.icon2,
             R.drawable.icon3
     };
+
     public String[] slide_headings= {
             "TREE",
             "RECYCLE",
