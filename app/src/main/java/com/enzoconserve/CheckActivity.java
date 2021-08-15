@@ -28,7 +28,6 @@ public class CheckActivity extends AppCompatActivity {
         checkuserstatus();
     }
     private void checkuserstatus(){
-
         FirebaseUser user = firebaseAuth.getCurrentUser();
         if(user!=null)
         {

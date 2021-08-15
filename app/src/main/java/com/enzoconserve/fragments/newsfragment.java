@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,13 +16,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import com.enzoconserve.R;
 import com.enzoconserve.news.Adapter;
 import com.enzoconserve.news.ApiClient;
 import com.enzoconserve.news.Articles;
 import com.enzoconserve.news.Headlines;
-
 import java.util.ArrayList;
 import java.util.List;
 import retrofit2.Call;
@@ -38,7 +35,7 @@ public class newsfragment extends Fragment {
     Dialog dialog;
     final String API_KEY="c4f6128bf69545da89c0fa6e3b7148f0";
     Adapter adapter;
-    String env="Climate";
+    String env="covid india";
     List<Articles> articles = new ArrayList<>();
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -97,8 +94,7 @@ public class newsfragment extends Fragment {
         return country.toLowerCase();
     } */
 
-    //hide toolbar
-    @Override
+    //hide toolbar@Override
     public void onResume() {
         super.onResume();
         ((AppCompatActivity)getActivity()).getSupportActionBar().hide();

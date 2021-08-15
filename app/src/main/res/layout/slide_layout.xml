@@ -10,7 +10,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
-
         <ImageView
             android:id="@+id/slide_image"
             android:layout_width="wrap_content"
@@ -18,7 +17,7 @@
             android:layout_marginRight="70sp"
             android:layout_height="300sp"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/icon1"
+            app:srcCompat="@drawable/tree"
             android:layout_marginTop="30sp"
             tools:ignore="MissingConstraints" />
 
@@ -35,6 +34,7 @@
                 android:layout_height="wrap_content"
                 android:text="s"
                 android:layout_gravity="center"
+                android:fontFamily="@font/opensansbold"
                 android:layout_below="@+id/slide_image"
                 android:textAlignment="center"
                 android:layout_above="@+id/slide_desc"
@@ -46,6 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:fontFamily="@font/opensans"
                 android:layout_marginTop="20sp"
                 android:layout_alignParentBottom="true"
                 android:text="d"

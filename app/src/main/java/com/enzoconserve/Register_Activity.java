@@ -40,7 +40,6 @@ public class Register_Activity extends AppCompatActivity {
         eid = findViewById(R.id.editText_email);
         epass = findViewById(R.id.editText_password);
         ename = findViewById(R.id.editText_name);
-        ephn = findViewById(R.id.editText_number);
         bregister = findViewById(R.id.button_register);
 
         mAuth = FirebaseAuth.getInstance();
@@ -53,33 +52,23 @@ public class Register_Activity extends AppCompatActivity {
                 String email = eid.getText().toString().trim();
                 String pass = epass.getText().toString().trim();
                 name=ename.getText().toString().trim();
-                number=ephn.getText().toString().trim();
 
                 if (name.length() > 20) {
 
                     Toast.makeText(getApplicationContext(), "pls enter less the 20 character in user name", Toast.LENGTH_SHORT).show();
 
-                } else if (name.length() == 0 || number.length() == 0 || email.length() ==0)
+                } else if (name.length() == 0 || email.length() ==0)
                 {
                     if(name.length()==0)
                     {
                         ename.setError("Enter Your Name");
                         ename.setFocusable(true);
                     }
-                    if(number.length()==0)
-                    {
-                        ephn.setError("Enter Your Number");
-                        ephn.setFocusable(true);
-                    }
                     if(email.length()==0)
                     {
                         eid.setError("Enter Your Email");
                         eid.setFocusable(true);
                     }
-
-                } else if(!number.matches(MobilePattern)) {
-                    ephn.setError("Invalid Number");
-                    ephn.setFocusable(true);
                 }else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
                     eid.setError("Invalid Email");
                     eid.setFocusable(true);
@@ -119,9 +108,7 @@ public class Register_Activity extends AppCompatActivity {
                             hashMap.put("email", email);
                             hashMap.put("uid", uid);
                             hashMap.put("name", name);
-                            hashMap.put("phone", number);
                             hashMap.put("image", "");
-                            hashMap.put("description","");
                             FirebaseDatabase database = FirebaseDatabase.getInstance();
                             DatabaseReference reference = database.getReference("users");
                             reference.child(uid).setValue(hashMap);

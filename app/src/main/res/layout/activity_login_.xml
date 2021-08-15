@@ -23,8 +23,8 @@
         android:text="Hello There!" />
     <EditText
         android:id="@+id/editText_email"
-        android:layout_width="300sp"
-        android:layout_height="40sp"
+        android:layout_width="320sp"
+        android:layout_height="45sp"
         android:fontFamily="sans-serif-light"
         android:layout_marginTop="30dp"
         android:hint="Enter your Email"
@@ -32,8 +32,8 @@
 
     <EditText
         android:id="@+id/editText_password"
-        android:layout_width="300sp"
-        android:layout_height="40sp"
+        android:layout_width="320sp"
+        android:layout_height="45sp"
         android:fontFamily="sans-serif-light"
         android:layout_marginTop="30dp"
         android:hint="Password"

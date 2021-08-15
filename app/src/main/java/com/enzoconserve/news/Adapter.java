@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.enzoconserve.R;
 import com.squareup.picasso.Picasso;
 
@@ -50,13 +51,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         String imageUrl = a.getUrlToImage();
         String url = a.getUrl();
 
-        Picasso.with(context).load(imageUrl).into(holder.imageView);
+       // Picasso.with(context).load(imageUrl).into(holder.imageView);
+
+        Glide.with(context).load(imageUrl).into(holder.imageView);
 
         holder.tvTitle.setText(a.getTitle());
         holder.tvSource.setText(a.getSource().getName());
         holder.tvDate.setText("\u2022"+dateTime(a.getPublishedAt()));
 
-       holder.cardView.setOnClickListener(new View.OnClickListener() {
+    /*   holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context,NewsDetailActivity.class);
@@ -68,7 +71,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                 intent.putExtra("url",a.getUrl());
                 context.startActivity(intent);
             }
-        });
+        });*/
 
     }
 

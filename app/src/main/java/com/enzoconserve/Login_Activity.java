@@ -103,7 +103,7 @@ public class Login_Activity extends AppCompatActivity {
         });
     }
     private void checkEmailVerification(){
-        FirebaseUser firebaseUser=mAuth.getInstance().getCurrentUser();
+        FirebaseUser firebaseUser=mAuth.getCurrentUser();
         Boolean emailflag=firebaseUser.isEmailVerified();
         if(emailflag)
         {

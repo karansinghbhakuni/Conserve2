@@ -33,8 +33,6 @@ import com.google.firebase.storage.StorageReference;
 import static com.google.firebase.storage.FirebaseStorage.getInstance;
 
 public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
-
-
     TextView slidername,slideremail;
     ImageView slideimage;
     DrawerLayout drawerLayout;
@@ -117,7 +115,11 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch(menuItem.getItemId()){
             case R.id.home:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new homefragment()).commit();
+                homefragment argumentFragment1=new homefragment();
+                Bundle bundle1=new Bundle();
+                bundle1.putString("image",image);
+                argumentFragment1.setArguments(bundle1);
+                fragmentManager.beginTransaction().replace(R.id.fragment_container,new homefragment()).commit();
                 break;
             case R.id.profile:
                 profilefragment argumentFragment=new profilefragment();//Get Fragment Instance
@@ -143,7 +145,11 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     }
 
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
     @Override
     protected void onStart() {
 

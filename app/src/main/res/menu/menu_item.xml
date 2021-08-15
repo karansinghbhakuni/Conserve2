@@ -18,10 +18,6 @@
     </group>
         <group>
             <item
-                android:id="@+id/aboutus"
-                android:title="About Us"
-                />
-            <item
                 android:id="@+id/logout"
                 android:title="Logout"/>
 

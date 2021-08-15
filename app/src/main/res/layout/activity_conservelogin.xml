@@ -46,10 +46,11 @@
         android:layout_width="wrap_content"
         android:layout_marginLeft="40sp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="40sp"
         android:text="You are not a member? Register"
         android:textColor="@color/black"
-        android:textSize="18dp" />
+        android:textSize="19dp" />
 
 </RelativeLayout>
